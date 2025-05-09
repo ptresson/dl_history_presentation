@@ -241,15 +241,16 @@
 \end{frame}
 
 \begin{frame}[t]{}
-\textbf{\large Good proof of concept but to costly in computing power and datasets ... }
+\textbf{\large Good proof of concept but too costly in computing power and datasets}
     \begin{figure}
         \centering
-        \includegraphics[width=.2\linewidth]{figs/xkcd_photo_is_a_bird.png}
+        \includegraphics[width=.27\linewidth]{figs/xkcd_photo_is_a_bird.png}
+    \vspace{-.5cm}
         \caption{\tiny XKCD comic from 2014}
     \end{figure}
 \end{frame}
 \begin{frame}[t]{}
-\textbf{\large Good proof of concept but to costly in computing power and datasets ... }
+\textbf{\large Good proof of concept but too costly in computing power and datasets}
 \textbf{\large  ...until}
 
 % \vspace{1cm}
@@ -260,7 +261,7 @@
 % \end{tabular}
 \end{frame}
 \begin{frame}[t]{}
-\textbf{\large Good proof of concept but to costly in computing power and datasets ... }
+\textbf{\large Good proof of concept but too costly in computing power and datasets}
 \textbf{\large  ...until}
 \begin{center}
     \begin{tikzpicture}
@@ -393,39 +394,52 @@
 % Architecture : GPT-2, GPT-3 (Radford et al.)
 % Jeu de données paradigmatique : WebText, Common Crawl
 % Optimisation : Adam, avec des adaptations comme LAMB (Layer-wise Adaptive Moments) pour entraîner des modèles extrêmement larges comme GPT-3 sur des superordinateurs. Le scaling des modèles a rendu nécessaire l’optimisation avancée et la gestion de mémoire.GPT-3 a démontré la puissance des grands modèles linguistiques, capables de générer du texte presque humain, d'accomplir des tâches multiples via un seul modèle entraîné sur des milliards de paramètres.
-\begin{frame}[t]{2020's : Transformers}
+\begin{frame}[t]{2020's : Transformers ...}
 \begin{columns}[t]
     \column{.4\linewidth}
     \vspace{1cm}
     \begin{itemize}
-        \item<1-> Attention
-        \item<2-> BERT, GPT
-        \item<3-> ViTs
+        \item Attention is all you need \cite{vaswani2017attention}
     \end{itemize}
     \column{.6\linewidth}
-    \only<1>{
     \begin{figure}
         \centering
-        \includegraphics[width=.7\linewidth]{example-image-a}
-        \caption{\tiny caption}
+        \vspace{-1.5cm}
+        \includegraphics[width=.6\linewidth]{figs/transformer.png}
+        \caption{\tiny A transformer block. Figure from \cite{vaswani2017attention}}
     \end{figure}
-    }
-    \only<2>{
-    \begin{figure}
-        \centering
-        \includegraphics[width=.7\linewidth]{example-image-a}
-        \caption{\tiny caption}
-    \end{figure}
-    }
-    \only<3>{
-    \begin{figure}
-        \centering
-        \includegraphics[width=.7\linewidth]{example-image-a}
-        \caption{\tiny caption}
-    \end{figure}
-    }
 \end{columns}
 \end{frame} 
+
+\begin{frame}{Sidestep : Transformers}
+        \centering
+    \begin{figure}
+        \centering
+        \includegraphics[width=.7\linewidth]{./figs/encoder_decoder.pdf}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Sidestep : Transformers}
+        \centering
+    \begin{figure}
+        \centering
+        \includegraphics<1>[width=.5\linewidth]{figs/attention1.png}%
+        \includegraphics<2>[width=.5\linewidth]{figs/attention2.png}%
+        \includegraphics<3>[width=.5\linewidth]{figs/attention3.png}%
+    \end{figure}
+    \only<1>{\textcolor{darkblue}{The knight} \textcolor{black}{saves} \textcolor{blue}{the queen}}%
+    \only<2>{\textcolor{blue}{Queen} \textcolor{black}{takes} \textcolor{darkblue}{knight} \textcolor{red}{, checkmate !}}%
+    \only<3>{\textcolor{black}{He was} \textcolor{darkblue}{knighted} \textcolor{black}{by} \textcolor{blue}{Queen} \textcolor{red}{Elizabeth II}}%
+\end{frame}
+
+\begin{frame}{Sidestep : Transformers}
+        \centering
+    \begin{figure}
+        \centering
+        \includegraphics[width=.7\linewidth]{./figs/mae.pdf}
+    \end{figure}
+\end{frame}
 
 % 2020 et au-delà : Évolution des Grands Modèles et Vision Transformer
 % 10. Vision Transformers (ViT) - 2020
@@ -433,48 +447,125 @@
 % Jeu de données paradigmatique : ImageNet, JFT-300M
 % Optimisation : AdamW (Adam avec pondération de décroissance), et des variantes comme Lookahead pour stabiliser l'apprentissage des grands réseaux basés sur l'attention.
 % ViT a montré que les transformers peuvent également surpasser les CNN classiques sur les tâches de vision par ordinateur, remplaçant progressivement les architectures convolutives dans certaines applications.
-\begin{frame}[t]{2021 and after : Self Supervised Learning}
+\begin{frame}[t]{2020's : Transformers ... and Self Supervised Learning}
 \begin{columns}[t]
     \column{.4\linewidth}
     \vspace{1cm}
     \begin{itemize}
-        \item<1-> ChatGPT
-        \item<2-> Masked Auto Encoders
-        \item<3-> DINO
+        \item Attention is all you need\\ \cite{vaswani2017attention}
+        \item LLMs (GPT, BERT...)\\ \cite{devlin2019bert}
+    \end{itemize}
+    \column{.6\linewidth}
+    \begin{figure}
+        \centering
+        \includegraphics[width=.7\linewidth]{figs/llms.png}
+        \caption{\tiny caption}
+    \end{figure}
+\end{columns}
+\end{frame} 
+
+\begin{frame}[t]{2020's : Transformers ... and Self Supervised Learning}
+\begin{columns}[t]
+    \column{.4\linewidth}
+    \vspace{1cm}
+    \begin{itemize}
+        \item<1-> Vision Transformer\\ \cite{dosovitskiy2020image}
+        \item<2-> Masked Auto Encoder\\ \cite{he2022masked}
+        \item<3-> DINO\\ \cite{caron2021emerging}
     \end{itemize}
     \column{.6\linewidth}
     \only<1>{
     \begin{figure}
         \centering
-        \includegraphics[width=.7\linewidth]{example-image-a}
-        \caption{\tiny caption}
+        \includegraphics[width=\linewidth]{figs/vit.jpg}
+        \caption{\tiny Figure from \cite{dosovitskiy2020image} }
     \end{figure}
     }
     \only<2>{
     \begin{figure}
         \centering
-        \includegraphics[width=.7\linewidth]{example-image-a}
-        \caption{\tiny caption}
+        \includegraphics[width=.8\linewidth]{figs/mae.png}
+        \caption{\tiny Figure from \cite{he2022masked}}
     \end{figure}
     }
     \only<3>{
     \begin{figure}
         \centering
-        \includegraphics[width=.7\linewidth]{example-image-a}
-        \caption{\tiny caption}
+        \includegraphics[width=.8\linewidth]{./figs/dino3.png}
+        \caption{\tiny Figure from \cite{caron2021emerging}}
     \end{figure}
     }
 \end{columns}
 \end{frame} 
 
+\begin{frame}{A lot left out !}
+\begin{center}
+    \begin{tikzpicture}[remember picture, overlay]
+        % Define coordinates for the words
+        \coordinate (word1) at (-2.5, 3);
+        \coordinate (word2) at (-4, 2);
+        \coordinate (word3) at (3, 4);
+        \coordinate (word4) at (-3, -2);
+        \coordinate (word5) at (2, -2);
+        \coordinate (word6) at (-2, 1);
+        \coordinate (word7) at (1.5, -1);
+        \coordinate (word8) at (3, -3);
 
+        % Overlay words using \node and \only
+        \only<1->{\node[font=\bfseries] at (word1) {Finetuning};}
+        \only<2->{\node[font=\bfseries] at (word2) {Games};}
+        \only<3->{\node[font=\bfseries] at (word3) {Reinforcement learning};}
+        \only<4->{\node[font=\bfseries] at (word4) {Time series};}
+        \only<5->{\node[font=\bfseries] at (word5) {Speech recognition};}
+        \only<6->{\node[font=\bfseries] at (word6) {Image generation};}
+        \only<7->{\node[font=\bfseries] at (word7) {Diffusion models};}
+        \only<8->{\node[font=\huge\bfseries] at (word8) {...};}
+    \end{tikzpicture}
+\end{center}
+\end{frame}
+
+\begin{frame}{Usefull ressources}
+\begin{columns}[t]
+    \column{.5\linewidth}
+    \textbf{State of the art}
+    \begin{itemize}
+        \item \href{https://huggingface.co/}{Huggingface}
+        \item \href{https://paperswithcode.com/sota}{PapersWithCode}
+    \end{itemize}
+    \textbf{Getting started}
+    \begin{itemize}
+        \item \href{https://docs.pytorch.org/tutorials/}{Pytorch}
+        \item \href{https://keras.io/getting_started/}{Keras}
+    \end{itemize}
+    \column{.5\linewidth}
+    \textbf{Understanding papers}
+    \begin{itemize}
+        \item \href{https://www.youtube.com/@YannicKilcher}{Yannic Kilcher}
+        \item \href{https://www.youtube.com/@AICoffeeBreak}{AI coffe break}
+    \end{itemize}
+    \textbf{Understanding visually}
+    \begin{itemize}
+        \item \href{https://www.youtube.com/@3blue1brown}{3blue1brown}
+        \item \href{https://www.youtube.com/@Deepia-ls2fo}{deepia}
+    \end{itemize}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}[plain]
+    \Huge{\textbf{Thanks for you attention !}}
+    
+    \vfill
+    
+    \LARGE{\textbf{Let's practice !}}
+\end{frame}
 
 \appendix
 % \printbibliography
 % [heading=none]
 \begin{frame}[allowframebreaks]{References}
 \setbeamertemplate{bibliography item}{}
-\small \printbibliography[heading=none]
+    {\footnotesize \printbibliography[heading=none]}
 \end{frame}
 
 
