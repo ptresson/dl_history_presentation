@@ -141,6 +141,49 @@
 \include{figs/perceptron.tex}
 \end{frame}
 
+\begin{frame}{First Neural Network Model : The Perceptron}
+$$
+y =
+\begin{bmatrix}
+    w_1&
+    w_2&
+    \dots&
+    w_n
+\end{bmatrix}
+\begin{bmatrix}
+    x_1\\
+    x_2\\
+    \vdots\\
+    x_n
+\end{bmatrix}
+$$
+\end{frame}
+
+\begin{frame}{First Neural Network Model : The Perceptron}
+$$
+y =
+\begin{bmatrix}
+    w_1&
+    w_2&
+    \dots&
+    w_n
+\end{bmatrix}
+\begin{bmatrix}
+    x_1\\
+    x_2\\
+    \vdots\\
+    x_n
+\end{bmatrix}
++
+\begin{bmatrix}
+    b_1\\
+    b_2\\
+    \vdots\\
+    b_n
+\end{bmatrix}
+$$
+\end{frame}
+
 \begin{frame}[t]{First Roadblock : XOR problem}
 \begin{columns}
     \column{.4\linewidth}
@@ -204,6 +247,30 @@
 \end{columns}
 \end{frame}
 
+\begin{frame}{As matrices}
+$$
+    y = ReLU\Biggl(
+\begin{bmatrix}
+    w_{1,1}& w_{1,2}& \dots& w_{1,n} \\
+    w_{2,1}& w_{2,2}& \dots& w_{2,n} \\
+    \vdots& & & \vdots \\
+    w_{k,1}& w_{k,2}& \dots& w_{k,n} \\
+\end{bmatrix}
+\begin{bmatrix}
+    x_1\\
+    x_2\\
+    \vdots\\
+    x_n
+\end{bmatrix}
++
+\begin{bmatrix}
+    b_1\\
+    b_2\\
+    \vdots\\
+    b_n
+\end{bmatrix}\Biggr)
+$$
+\end{frame}
 
 
 % Années 1990 : Avancées en Apprentissage Supervisé
@@ -591,6 +658,14 @@
     {\footnotesize \printbibliography[heading=none]}
 \end{frame}
 
+\begin{frame}{Sidestep : Transformers}
+        \centering
+    \begin{figure}
+        \centering
+        \includegraphics[width=.7\linewidth]{./figs/transformer3b1b.png}
+    \end{figure}
+    \nonumbernote{\href{https://www.youtube.com/@3blue1brown}{Adapted from 3blue1brown}}
+\end{frame}
 
 \begin{frame}{Sidestep : Transformers}
         \centering
