@@ -36,8 +36,8 @@
 
 \title{Brief History of Recent Deep Learning}
 \subtitle{AI for ecologists}
-\author[Paul Tresson]{\textbf{Paul Tresson}, Maximilien Servajean, Benjamin Bourel}
-\date{22/05/25} % or whatever the date you are presenting in is
+\author[Paul Tresson]{\textbf{Paul Tresson}}
+\date{03/06/26} % or whatever the date you are presenting in is
 % \institute[Institut de Recherche pour le Développement]{UMR AMAP}
 
 %\copyrightnotice{Published by Institut de Recherche pour le Développement, with permission}
@@ -170,23 +170,23 @@
     \column{.4\linewidth}
     \vspace{1cm}
     \begin{itemize}
-        \item<1-> Multi Layer Perceptron
-        \item<2-> Non-linearity (\textit{e.g.} ReLu)
+        \item<1-> Non-linearity (\textit{e.g.} ReLu)
+        \item<2-> Multi Layer Perceptron
         \item<3-> Gradient Descent and Backpropagation\\ \cite{rumelhart1986learning}
     \end{itemize}
     \column{.6\linewidth}
     \only<1>{
     \begin{figure}
         \centering
-        \includegraphics[width=\linewidth]{figs/mlp.pdf}
-        \caption{\tiny Multi Layer Perceptron}
+        \includegraphics[width=\linewidth]{figs/relu.png}
+        \caption{\tiny Rectified Linear Unit. Figure from \cite{goodfellow2016deep}}
     \end{figure}
     }
     \only<2>{
     \begin{figure}
         \centering
-        \includegraphics[width=\linewidth]{figs/relu.png}
-        \caption{\tiny Rectified Linear Unit. Figure from \cite{goodfellow2016deep}}
+        \includegraphics[width=\linewidth]{figs/mlp.pdf}
+        \caption{\tiny Multi Layer Perceptron}
     \end{figure}
     }
     \only<3->{
@@ -366,40 +366,41 @@
 % Jeu de données paradigmatique : Babi (questions answering), IMDB (sentiment analysis)
 % Optimisation : SGD, parfois avec RMSProp ou Adam, et techniques de gestion des gradients comme le gradient clipping pour éviter les explosions de gradients dans les séquences longues.
 % LSTM a dominé les tâches de séquence, telles que la traduction automatique, la génération de texte et l'analyse de sentiments.
-\begin{frame}[t]{2010's : NLP}
-\begin{columns}[t]
-    \column{.4\linewidth}
-    \vspace{1cm}
-    \begin{itemize}
-        \item<1-> IMBD\\ \cite{maas2011learning}
-        \item<2-> LSTM\\ \cite{hochreiter1997long}
-        \item<3-> RNN's\\ \textit{e.g.} \cite{sutskever2014sequence}
-    \end{itemize}
-    \column{.6\linewidth}
-    \vspace{1cm}
-    \only<1>{
-    \begin{figure}
-        \centering
-        \includegraphics[width=\linewidth]{figs/IMDB.png}
-        \caption{\tiny Extract from IMDB database}
-    \end{figure}
-    }
-    \only<2>{
-    \begin{figure}
-        \centering
-        \includegraphics[width=.8\linewidth]{figs/LSTM.png}
-        \caption{\tiny Figure by \href{https://commons.wikimedia.org/w/index.php?curid=60149410}{fdeloche}}
-    \end{figure}
-    }
-    \only<3>{
-    \begin{figure}
-        \centering
-        \includegraphics[width=.8\linewidth]{./figs/RNN.png}
-        \caption{\tiny Figure by \href{https://commons.wikimedia.org/w/index.php?curid=60109157}{fdeloche}}
-    \end{figure}
-    }
-\end{columns}
-\end{frame}
+
+% \begin{frame}[t]{2010's : NLP}
+% \begin{columns}[t]
+%     \column{.4\linewidth}
+%     \vspace{1cm}
+%     \begin{itemize}
+%         \item<1-> IMBD\\ \cite{maas2011learning}
+%         \item<2-> LSTM\\ \cite{hochreiter1997long}
+%         \item<3-> RNN's\\ \textit{e.g.} \cite{sutskever2014sequence}
+%     \end{itemize}
+%     \column{.6\linewidth}
+%     \vspace{1cm}
+%     \only<1>{
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=\linewidth]{figs/IMDB.png}
+%         \caption{\tiny Extract from IMDB database}
+%     \end{figure}
+%     }
+%     \only<2>{
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=.8\linewidth]{figs/LSTM.png}
+%         \caption{\tiny Figure by \href{https://commons.wikimedia.org/w/index.php?curid=60149410}{fdeloche}}
+%     \end{figure}
+%     }
+%     \only<3>{
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=.8\linewidth]{./figs/RNN.png}
+%         \caption{\tiny Figure by \href{https://commons.wikimedia.org/w/index.php?curid=60109157}{fdeloche}}
+%     \end{figure}
+%     }
+% \end{columns}
+% \end{frame}
 
 % Milieu des années 2010 : Évolution vers les Transformateurs et l’Attention
 % 8. Transformers - 2017
@@ -428,35 +429,35 @@
 \end{columns}
 \end{frame} 
 
-\begin{frame}{Sidestep : Transformers}
-        \centering
-    \begin{figure}
-        \centering
-        \includegraphics[width=.7\linewidth]{./figs/encoder_decoder.pdf}
-    \end{figure}
-\end{frame}
+% \begin{frame}{Sidestep : Transformers}
+%         \centering
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=.7\linewidth]{./figs/encoder_decoder.pdf}
+%     \end{figure}
+% \end{frame}
 
 
-\begin{frame}{Sidestep : Transformers}
-        \centering
-    \begin{figure}
-        \centering
-        \includegraphics<1>[width=.5\linewidth]{figs/attention1.png}%
-        \includegraphics<2>[width=.5\linewidth]{figs/attention2.png}%
-        \includegraphics<3>[width=.5\linewidth]{figs/attention3.png}%
-    \end{figure}
-    \only<1>{\textcolor{darkblue}{The knight} \textcolor{black}{saves} \textcolor{blue}{the queen}}%
-    \only<2>{\textcolor{blue}{Queen} \textcolor{black}{takes} \textcolor{darkblue}{knight} \textcolor{red}{, checkmate !}}%
-    \only<3>{\textcolor{black}{He was} \textcolor{darkblue}{knighted} \textcolor{black}{by} \textcolor{blue}{Queen} \textcolor{red}{Elizabeth II}}%
-\end{frame}
+% \begin{frame}{Sidestep : Transformers}
+%         \centering
+%     \begin{figure}
+%         \centering
+%         \includegraphics<1>[width=.5\linewidth]{figs/attention1.png}%
+%         \includegraphics<2>[width=.5\linewidth]{figs/attention2.png}%
+%         \includegraphics<3>[width=.5\linewidth]{figs/attention3.png}%
+%     \end{figure}
+%     \only<1>{\textcolor{darkblue}{The knight} \textcolor{black}{saves} \textcolor{blue}{the queen}}%
+%     \only<2>{\textcolor{blue}{Queen} \textcolor{black}{takes} \textcolor{darkblue}{knight} \textcolor{red}{, checkmate !}}%
+%     \only<3>{\textcolor{black}{He was} \textcolor{darkblue}{knighted} \textcolor{black}{by} \textcolor{blue}{Queen} \textcolor{red}{Elizabeth II}}%
+% \end{frame}
 
-\begin{frame}{Sidestep : Transformers}
-        \centering
-    \begin{figure}
-        \centering
-        \includegraphics[width=.7\linewidth]{./figs/mae.pdf}
-    \end{figure}
-\end{frame}
+% \begin{frame}{Sidestep : Transformers}
+%         \centering
+%     \begin{figure}
+%         \centering
+%         \includegraphics[width=.7\linewidth]{./figs/mae.pdf}
+%     \end{figure}
+% \end{frame}
 
 % 2020 et au-delà : Évolution des Grands Modèles et Vision Transformer
 % 10. Vision Transformers (ViT) - 2020
@@ -588,6 +589,37 @@
 \begin{frame}[allowframebreaks]{References}
 \setbeamertemplate{bibliography item}{}
     {\footnotesize \printbibliography[heading=none]}
+\end{frame}
+
+
+\begin{frame}{Sidestep : Transformers}
+        \centering
+    \begin{figure}
+        \centering
+        \includegraphics[width=.7\linewidth]{./figs/encoder_decoder.pdf}
+    \end{figure}
+\end{frame}
+
+
+\begin{frame}{Sidestep : Transformers}
+        \centering
+    \begin{figure}
+        \centering
+        \includegraphics<1>[width=.5\linewidth]{figs/attention1.png}%
+        \includegraphics<2>[width=.5\linewidth]{figs/attention2.png}%
+        \includegraphics<3>[width=.5\linewidth]{figs/attention3.png}%
+    \end{figure}
+    \only<1>{\textcolor{darkblue}{The knight} \textcolor{black}{saves} \textcolor{blue}{the queen}}%
+    \only<2>{\textcolor{blue}{Queen} \textcolor{black}{takes} \textcolor{darkblue}{knight} \textcolor{red}{, checkmate !}}%
+    \only<3>{\textcolor{black}{He was} \textcolor{darkblue}{knighted} \textcolor{black}{by} \textcolor{blue}{Queen} \textcolor{red}{Elizabeth II}}%
+\end{frame}
+
+\begin{frame}{Sidestep : Transformers}
+        \centering
+    \begin{figure}
+        \centering
+        \includegraphics[width=.7\linewidth]{./figs/mae.pdf}
+    \end{figure}
 \end{frame}
 
 
